@@ -4,16 +4,30 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.LinearLayout.HORIZONTAL
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var rvGame : RecyclerView
+    private var list: ArrayList<Game> = arrayListOf()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        if (Build.VERSION.SDK_INT < 16) {
-            window.setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN)
-            }
         setContentView(R.layout.activity_main)
+
+        //hooks
+        rvGame = findViewById(R.id.rv_Game)
+        rvGame.setHasFixedSize(true)
+
+        list.addAll(gameData.listData_Horor)
+
+        showRecycler()
+    }
+
+    private fun showRecycler() {
+        rvGame.layoutManager = LinearLayoutManager(this)
     }
 }
