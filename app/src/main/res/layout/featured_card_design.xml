@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="270dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="8dp"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/little_nightmare1"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_namaGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_game"
+            android:padding="3dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"/>
+
+        <RatingBar
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:rating="4" />
+
+        <TextView
+            android:id="@+id/tv_deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="3dp"
+            android:textSize="10sp"
+            android:text="Game ini berasal dari indonesia dan dikembangkan oleh"/>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

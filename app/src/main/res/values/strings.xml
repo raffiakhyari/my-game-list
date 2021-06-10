@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">gameList</string>
+    <string name="deskripsi">deskripsi</string>
+    <string name="nama_game">Nama Game</string>
 </resources>
