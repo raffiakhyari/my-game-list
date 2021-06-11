@@ -13,7 +13,8 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="match_parent"
+            android:id="@+id/img_game"
+            android:layout_width="170dp"
             android:layout_height="150dp"
             android:src="@drawable/little_nightmare1"
             android:scaleType="centerCrop" />

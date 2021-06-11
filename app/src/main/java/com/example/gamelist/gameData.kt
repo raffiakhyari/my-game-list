@@ -58,6 +58,7 @@ object gameData {
         R.drawable.csgo,
         R.drawable.valorant
     )
+
     //menginisialisasi data setiap kategori/genre
 
     val listData_Action: ArrayList<Game>
