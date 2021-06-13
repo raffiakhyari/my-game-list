@@ -1,7 +1,11 @@
 package com.example.gamelist.Activity
 
+import android.content.Intent
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,11 +15,9 @@ import com.example.gamelist.Object.gameData
 import com.example.gamelist.R
 import com.example.gamelist.viewPagerAdapter
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     //action bar
-    private lateinit var actionBar: ActionBar
-
     private lateinit var rvGameAction : RecyclerView
 
     private var list: ArrayList<Game> = arrayListOf()
@@ -24,9 +26,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //init actionbar
-        actionBar = this.supportActionBar!!
-
         //hooks
         rvGameAction = findViewById(R.id.rv_GameAction)
 
@@ -34,12 +33,24 @@ class MainActivity : AppCompatActivity() {
         list.addAll(gameData.listData_Action)
         showRecyclerAction()
 
-    }
 
+        val btnMoveActivity: ImageView = findViewById(R.id.btn_user)
+        btnMoveActivity.setOnClickListener(this)
+
+    }
     private fun showRecyclerAction() {
         rvGameAction.layoutManager = LinearLayoutManager(this, LinearLayout.HORIZONTAL,false)
         val viewPagerAdapter = viewPagerAdapter(list)
         rvGameAction.adapter = viewPagerAdapter
+    }
+
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.btn_user ->{
+                val moveIntent = Intent(this@MainActivity, Profile::class.java)
+                startActivity(moveIntent)
+            }
+        }
     }
 
 }

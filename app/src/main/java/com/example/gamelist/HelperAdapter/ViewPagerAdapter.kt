@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.gamelist.Object.Game
+import org.w3c.dom.Text
 
 class viewPagerAdapter(private val listGame: ArrayList<Game>) :RecyclerView.Adapter<viewPagerAdapter.listViewHolder>(){
 
@@ -15,6 +16,7 @@ class viewPagerAdapter(private val listGame: ArrayList<Game>) :RecyclerView.Adap
     inner class listViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_game)
         var tvName: TextView = itemView.findViewById(R.id.tv_namaGame)
+        var tvGenre: TextView = itemView.findViewById(R.id.tv_genreGame)
         var tvDetail: TextView = itemView.findViewById(R.id.tv_deskripsi)
     }
 
@@ -31,6 +33,7 @@ class viewPagerAdapter(private val listGame: ArrayList<Game>) :RecyclerView.Adap
             .into(holder.imgPhoto)
 
         holder.tvName.text = game.name
+        holder.tvGenre.text = game.genre_game
         holder.tvDetail.text = game.detaill_game
 
     }

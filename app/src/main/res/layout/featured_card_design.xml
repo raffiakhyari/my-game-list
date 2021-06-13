@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="160dp"
+    android:layout_width="170dp"
     android:layout_height="270dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="15dp"
@@ -24,26 +24,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nama_game"
-            android:padding="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
             android:textSize="15sp"
             android:textColor="@color/black"
-            android:fontFamily="@font/poppins"/>
-
-        <RatingBar
-            style="@style/Widget.AppCompat.RatingBar.Small"
-            android:layout_width="93dp"
+            android:fontFamily="@font/poppins_semibold"/>
+        <TextView
+            android:id="@+id/tv_genreGame"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="3dp"
-            android:rating="4" />
+            android:text="@string/Genre"
+            android:layout_marginLeft="5dp"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"/>
 
         <TextView
             android:id="@+id/tv_deskripsi"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="59dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:padding="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:autoSizeTextType="uniform"
+            android:text="Game ini berasal dari indonesia dan dikembangkan oleh"
             android:textSize="10sp"
-            android:text="Game ini berasal dari indonesia dan dikembangkan oleh"/>
+            android:fontFamily="@font/poppins_light"/>
     </LinearLayout>
 
 

@@ -2,4 +2,8 @@
     <string name="app_name">gameList</string>
     <string name="deskripsi">deskripsi</string>
     <string name="nama_game">Nama Game</string>
+    <string name="Genre">genre</string>
+    <string name="email">email</string>
+    <string name="github">Github</string>
+    <string name="Profile" />
 </resources>
