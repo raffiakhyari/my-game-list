@@ -4,8 +4,144 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.DetailGame">
+    tools:context=".Activity.DetailGame"
+    android:orientation="vertical">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    app:cardBackgroundColor="@color/semiTransparentColor"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:id="@+id/btn_kembali"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/previous"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"/>
+
+                </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/detail_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    android:src="@drawable/little_nightmare1"
+                    android:scaleType="centerCrop"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    />
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/detail_page">
+
+                <RelativeLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/detail_nama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Little Nightmare 1"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <ImageView
+                        android:id="@+id/favorit"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/favourite"
+                        android:layout_marginRight="70dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_alignParentRight="true" />
+
+                    <ImageView
+                        android:id="@+id/share"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="25dp"
+                        android:src="@drawable/share" />
+
+                    <TextView
+                        android:id="@+id/detail_genre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/detail_nama"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Horror Game"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="424dp"
+                    android:layout_height="356dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <TextView
+                        android:id="@+id/detail_deskripsi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="27dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="@string/deskripsi_detail"
+                        android:textSize="14sp"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
