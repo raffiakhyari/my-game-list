@@ -10,12 +10,16 @@ import com.example.gamelist.R
 
 class splashscreen : AppCompatActivity() {
 
+    private val splashScreentimeout : Long = 2500
+
     private lateinit var handler: Handler
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splashscreen)
 
-        supportActionBar?.hide()
-        //kita mendeklarasikan kelas
+        Handler().postDelayed({
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        },splashScreentimeout)
     }
 }

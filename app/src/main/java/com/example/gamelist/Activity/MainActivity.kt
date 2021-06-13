@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gamelist.Object.Game
@@ -45,6 +46,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val tvViewAll: TextView = findViewById(R.id.tv_viewAll)
         tvViewAll.setOnClickListener(this)
+
+
+        //toast banner
+        val bannerAction: ImageView = findViewById(R.id.img_bannerAction)
+        bannerAction.setOnClickListener(this)
+
+        val bannerHorror: ImageView = findViewById(R.id.img_bannerHoror)
+        bannerHorror.setOnClickListener(this)
+
+        val bannerShooter: ImageView = findViewById(R.id.img_bannerShooter)
+        bannerShooter.setOnClickListener(this)
+
     }
 
     private fun showRecyclerAction() {
@@ -67,6 +80,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.tv_viewAll ->{
                 val pindahActivity = Intent(this@MainActivity, DetailGame::class.java)
                 startActivity(pindahActivity)
+            }
+
+            R.id.img_bannerAction->{
+                Toast.makeText(this, "Ini Banner Action Games !", Toast.LENGTH_LONG).show()
+            }
+            R.id.img_bannerHoror->{
+                Toast.makeText(this, "Ini Banner Horror Games !", Toast.LENGTH_LONG).show()
+            }
+            R.id.img_bannerShooter->{
+                Toast.makeText(this, "Ini Banner Shooter Games !", Toast.LENGTH_LONG).show()
             }
         }
     }
