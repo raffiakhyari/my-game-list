@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GameList">
-        <activity android:name=".splashscreen"></activity>
-        <activity android:name=".DetailGame" />
-        <activity android:name=".Profile" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.splashscreen"></activity>
+        <activity android:name=".Activity.DetailGame" />
+        <activity android:name=".Activity.Profile" />
+        <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
