@@ -1,13 +1,12 @@
 package com.example.gamelist.Activity
 
 import android.content.Intent
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
-import androidx.appcompat.app.ActionBar
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gamelist.Object.Game
@@ -33,11 +32,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         list.addAll(gameData.listData_Action)
         showRecyclerAction()
 
-
         val btnMoveActivity: ImageView = findViewById(R.id.btn_user)
         btnMoveActivity.setOnClickListener(this)
 
+        val tvViewAll: TextView = findViewById(R.id.tv_viewAll)
+        tvViewAll.setOnClickListener(this)
     }
+
     private fun showRecyclerAction() {
         rvGameAction.layoutManager = LinearLayoutManager(this, LinearLayout.HORIZONTAL,false)
         val viewPagerAdapter = viewPagerAdapter(list)
@@ -52,5 +53,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
+
 
 }
