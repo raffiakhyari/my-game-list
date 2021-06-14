@@ -40,11 +40,6 @@ class viewPagerAdapter(
     }
 
     override fun onBindViewHolder(holder: listViewHolder, position: Int) {
-//        val game = listGame[position]
-//
-//        Glide.with(holder.itemView.context)
-//            .load(game.images)
-//            .into(holder.imgPhoto)
         holder.bindView(listGame[position], listener)
     }
 
